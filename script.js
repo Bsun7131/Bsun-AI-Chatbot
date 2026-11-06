@@ -35,6 +35,15 @@ function addMessage(text, sender) {
 
 // Prepare a safe local demonstration.
 function sendMessage() {
+        const input = document.getElementById("userInput");
+    if (!input) return;
+
+    const message = input.value.trim();
+    if (!message) return;
+
+    addMessage(message, "user");
+    input.value = "";
+    
     if (!AI_ENABLED) {
         addMessage(
             "AI connection is not enabled yet.",
