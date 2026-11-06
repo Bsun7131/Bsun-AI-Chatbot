@@ -1,0 +1,102 @@
+
+<!--
+Copyright (c) 2026 Bisan Subba.
+All rights reserved.
+Bsun AI Chatbot — Main Interface
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bsun AI Chatbot</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #06152e, #0b2b55, #174a7e);
+  color: white;
+  min-height: 100vh;
+}
+.app {
+  max-width: 800px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+header { text-align: center; padding: 20px 0; }
+h1 { margin: 8px 0; }
+.subtitle { color: #b8c9e5; }
+.chat {
+  flex: 1;
+  min-height: 300px;
+  padding: 20px;
+  border: 1px solid #36577f;
+  border-radius: 16px;
+  background: #07192d;
+}
+.message {
+  background: #18395c;
+  padding: 15px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+.composer {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+textarea {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font: inherit;
+  resize: vertical;
+}
+button {
+  background: #3278dc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+}
+button:disabled { opacity: 0.5; }
+footer {
+  text-align: center;
+  color: #b8c9e5;
+  padding: 18px;
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+<main class="app">
+<header>
+  <h1>🤖 Bsun AI Chatbot</h1>
+  <p class="subtitle">Your AI Assistant</p>
+</header>
+
+<section class="chat" aria-label="Conversation">
+  <div class="message">
+    👋 Welcome to Bsun AI Chatbot!
+    <p>Our AI connection is being prepared.</p>
+  </div>
+</section>
+
+<div class="composer">
+  <textarea placeholder="Chat coming soon..." disabled></textarea>
+  <button disabled>Send</button>
+</div>
+
+<footer>
+  Copyright © 2026 Bisan Subba.
+  All rights reserved.
+</footer>
+</main>
+</body>
+</html>
