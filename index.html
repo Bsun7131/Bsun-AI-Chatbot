@@ -88,6 +88,13 @@ footer {
   </div>
 </section>
 
+<!-- Cloudflare Turnstile Security -->
+<div
+  class="cf-turnstile"
+  data-sitekey="0x4AAAAAAF2z6rornWH420nQ"
+  style="margin-top: 15px;"
+></div>
+
 <div class="composer">
   <textarea id="userInput" placeholder="Type your message..." maxlength="1000"></textarea>
   <button id="sendBtn" onclick="sendMessage()">Send</button>
@@ -98,6 +105,13 @@ footer {
   All rights reserved.
 </footer>
 </main>
-  <script src="script.js"></script>
+  <!-- Cloudflare Turnstile -->
+<script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+></script>
+
+<script src="script.js"></script>
 </body>
 </html>
