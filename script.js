@@ -124,23 +124,4 @@ async function sendMessage() {
   }
 }
 
-// ========================================
-// ENTER KEY TO SEND MESSAGE
-// ========================================
 
-const userInput = document.getElementById("userInput");
-
-if (userInput) {
-  userInput.addEventListener("keydown", function (event) {
-
-    if (
-      event.key === "Enter" &&
-      !event.shiftKey &&
-      !event.isComposing
-    ) {
-      event.preventDefault();
-      sendMessage();
-    }
-
-  });
-}
