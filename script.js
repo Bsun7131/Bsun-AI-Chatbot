@@ -21,13 +21,18 @@ function addMessage(text, sender) {
   message.className = "message";
 
   if (sender === "user") {
-    message.style.background = "#245b91";
-  }
+  message.style.background = "#245b91";
+} else {
+  message.style.background = "#254766";
+}
 
   message.style.marginTop = "12px";
 
   // Prevent messages from being interpreted as HTML.
-  message.textContent = text;
+  message.textContent =
+  sender === "assistant"
+    ? text.replace(/\*\*(.*?)\*\*/g, "$1")
+    : text;
 
   chat.appendChild(message);
   chat.scrollTop = chat.scrollHeight;
